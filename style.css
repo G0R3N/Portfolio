@@ -13,11 +13,12 @@
 }
 
 /* Reset y base */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-dark);
   transition: background 0.3s, color 0.3s;
@@ -58,7 +59,11 @@ footer.footer {
 header.hero {
   text-align: center;
   padding: 3rem 1rem 2rem;
-  background: radial-gradient(circle at top left, var(--primary) 0%, var(--bg-dark) 100%);
+  background: radial-gradient(
+    circle at top left,
+    var(--primary) 0%,
+    var(--bg-dark) 100%
+  );
   color: white;
 }
 
@@ -94,8 +99,15 @@ header.hero {
 }
 
 @keyframes pulse {
-  0%,100% { opacity:1; transform:scale(1); }
-  50%     { opacity:0.7; transform:scale(1.05); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
 }
 
 /* Navegación */
@@ -162,16 +174,16 @@ header.hero {
 }
 
 .project-card {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .project-card:hover {
   transform: translateY(-10px) rotate(-2deg);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 0 12px var(--accent);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 12px var(--accent);
 }
 
 .project-card h3 {
@@ -202,7 +214,7 @@ header.hero {
   background-color: var(--form-bg);
   padding: 3rem 2rem;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -222,13 +234,13 @@ header.hero {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
   border-color: var(--accent);
   box-shadow: 0 0 8px var(--shadow-glow);
 }
@@ -276,8 +288,8 @@ footer.footer .socials a:hover {
 /* Quitar subrayado y color por defecto en enlaces del footer */
 footer.footer .socials a,
 footer.footer .socials a:visited {
-  color: var(--accent);     /* mantiene tu color de acento */
-  text-decoration: none;     /* quita el subrayado */
+  color: var(--accent); /* mantiene tu color de acento */
+  text-decoration: none; /* quita el subrayado */
 }
 
 /* Opcional: mantener el estado hover limpio */
@@ -308,4 +320,21 @@ footer.footer .socials a:hover {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px 40px;
+  font-size: 18px;
+  border: 2px solid #4caf50;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
 }
