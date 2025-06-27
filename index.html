@@ -1,173 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Goren Jiménez Mira | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- Canvas para animaciones opcionales -->
-    <canvas id="background"></canvas>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goren Jiménez Mira | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border: 2px solid #4caf50;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas para animaciones opcionales -->
+  <canvas id="background"></canvas>
 
-    <header class="hero" data-aos="fade-down" data-aos-duration="1500">
-      <div class="hero-content container">
-        <img src="avatar.jpg" alt="Foto de Goren" class="avatar" />
-        <h1 class="large-title">Goren Jiménez Mira</h1>
-        <p style="font-size: 20px">Programador y desarrollador WEB</p>
-        <p class="tagline">"La mejor inversión se hace en uno mismo"</p>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#experience">Experiencia</a></li>
-            <li><a href="#knowledge">Conocimientos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            <li><a href="cv/Goren_CV.pdf" download>CV</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container">
-      <section id="about" class="section" data-aos="fade-up">
-        <h2 class="section-title">👤 Sobre mí</h2>
-        <p class="intro-text">
-          Soy Goren, tengo 21 años y quiero aprovechar todo el tiempo posible en
-          aumentar mis conocimientos y crecer en el mundo laboral. Mi sueño es
-          poder ayudar a la gente con mis conocimientos de cualquier forma.
-        </p>
-        <p class="extras">Hobbies: videojuegos, viajes y deporte.</p>
-      </section>
-
-      <section id="projects" class="section" data-aos="fade-up">
-        <h2 class="section-title">💼 Proyectos Destacados</h2>
-        <div class="project-grid">
-          <div class="project-card" data-aos="zoom-in">
-            <h3>🎮 Jumped</h3>
-            <p>
-              Mi primer videojuego donde te enfrentas a enemigos en un mapa que
-              debes superar.
-            </p>
-            <p><strong>Tecnologías:</strong> Unity, C#, Firebase</p>
-            <a href="https://github.com/G0R3N/JUMPED.git" target="_blank"
-              >🔗 Ver en GitHub</a
-            >
-          </div>
-          <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-            <h3>🌐 Bit2Bit</h3>
-            <p>
-              Web donde los desarrolladores pueden subir juegos en WebGL y los
-              usuarios jugar directamente.
-            </p>
-            <p>
-              <strong>Tecnologías:</strong> Angular, TypeScript, PHP,
-              PHPMyAdmin, HTML y CSS
-            </p>
-            <a href="https://bit2bit.fun/" target="_blank">🌍 Ver demo</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section" data-aos="fade-up">
-        <h2 class="section-title">🧠 Experiencia Laboral</h2>
-        <p class="intro-text">
-          Desde los 18 años he trabajado durante 3 años en
-          <strong>Inelcom Xàtiva</strong> como operador informático. Durante
-          este tiempo adquirí experiencia en gestión de sistemas, soporte
-          técnico a usuarios, resolución de incidencias y mantenimiento de
-          equipos informáticos.
-        </p>
-        <p class="intro-text">
-          Posteriormente realicé prácticas como programador web en
-          <strong>Apunts Alcúdia</strong>, donde participé en tareas de
-          desarrollo y mantenimiento de páginas web, implementando soluciones
-          tanto en el front-end como en el back-end.
-        </p>
-        <p class="intro-text">
-          También he formado parte del equipo técnico de
-          <strong>Asociación Espurna</strong>, colaborando en el desarrollo de
-          nuevas funcionalidades para su plataforma y ayudando a mejorar la
-          estructura y accesibilidad del sitio web.
-        </p>
-      </section>
-
-      <section id="knowledge" class="section" data-aos="fade-up">
-        <h2 class="section-title">📘 Conocimientos</h2>
-        <ul class="intro-text">
-          <li>
-            <strong>Lenguajes:</strong> Java, JavaScript, HTML5, CSS3, PHP,
-            Python, C#
-          </li>
-          <li>
-            <strong>Frameworks y herramientas:</strong> Symfony, Unity,
-            WordPress
-          </li>
-          <li><strong>Bases de datos:</strong> MySQL, PHPMyAdmin</li>
-          <li>
-            <strong>Servidores:</strong> Ubuntu Server, Windows Server, Apache,
-            Tomcat
-          </li>
-          <li>
-            <strong>Otros:</strong> Desarrollo de landing pages, diseño
-            responsivo, buenas prácticas de accesibilidad web
-          </li>
+  <header class="hero" data-aos="fade-down" data-aos-duration="1500">
+    <div class="hero-content container">
+      <img src="avatar.jpg" alt="Foto de Goren" class="avatar" />
+      <h1 class="large-title">Goren Jiménez Mira</h1>
+      <p style="font-size: 20px;">Programador y desarrollador WEB</p>
+      <p class="tagline">"La mejor inversión se hace en uno mismo"</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+          <li><a href="#knowledge">Conocimientos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li><a href="cv/Goren_CV.pdf" download>CV</a></li>
         </ul>
-      </section>
+      </nav>
+    </div>
+  </header>
 
-      <section id="contact" class="section" data-aos="fade-up">
-        <h2 class="section-title">📨 Contacto</h2>
-        <form
-          action="https://formsubmit.co/gorenjm04@gmail.com"
-          method="POST"
-          class="contact-form"
-          data-aos="flip-up"
-        >
-          <input type="text" name="name" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu correo" required />
-          <textarea name="message" placeholder="Tu mensaje" required></textarea>
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://g0r3n.github.io/Portfolio/gracias.html"
-          />
-          <button type="submit">📨 Enviar</button>
-        </form>
-      </section>
-    </main>
+  <main class="container">
+    <section id="about" class="section" data-aos="fade-up">
+      <h2 class="section-title">👤 Sobre mí</h2>
+      <p class="intro-text">Soy Goren, tengo 21 años y quiero aprovechar todo el tiempo posible en aumentar mis conocimientos y crecer en el mundo laboral. Mi sueño es poder ayudar a la gente con mis conocimientos de cualquier forma.</p>
+      <p class="extras">Hobbies: videojuegos, viajes y deporte.</p>
+    </section>
 
-    <footer
-      class="footer"
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-once="true"
-    >
-      <div class="container">
-        <p>&copy; 2025 Goren Jiménez Mira</p>
-        <div class="socials">
-          <a href="https://github.com/G0R3N" target="_blank">GitHub</a>
-          <a
-            href="https://www.linkedin.com/in/goren-jimenez-mira"
-            target="_blank"
-            >LinkedIn</a
-          >
+    <section id="projects" class="section" data-aos="fade-up">
+      <h2 class="section-title">💼 Proyectos Destacados</h2>
+      <div class="project-grid">
+        <div class="project-card" data-aos="zoom-in">
+          <h3>🎮 Jumped</h3>
+          <p>Mi primer videojuego donde te enfrentas a enemigos en un mapa que debes superar.</p>
+          <p><strong>Tecnologías:</strong> Unity, C#, Firebase</p>
+          <a href="https://github.com/G0R3N/JUMPED.git" target="_blank">🔗 Ver en GitHub</a>
+        </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+          <h3>🌐 Bit2Bit</h3>
+          <p>Web donde los desarrolladores pueden subir juegos en WebGL y los usuarios jugar directamente.</p>
+          <p><strong>Tecnologías:</strong> Angular, TypeScript, PHP, PHPMyAdmin, HTML y CSS</p>
+          <a href="https://bit2bit.fun/" target="_blank">🌍 Ver demo</a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- Scripts al final para evitar errores -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => AOS.init());
-    </script>
-    <script src="script.js"></script>
-  </body>
+    <section id="experience" class="section" data-aos="fade-up">
+      <h2 class="section-title">🧠 Experiencia Laboral</h2>
+      <p class="intro-text">Desde los 18 años he trabajado durante 3 años en <strong>Inelcom Xàtiva</strong> como operador informático. Durante este tiempo adquirí experiencia en gestión de sistemas, soporte técnico a usuarios, resolución de incidencias y mantenimiento de equipos informáticos.</p>
+      <p class="intro-text">Posteriormente realicé prácticas como programador web en <strong>Apunts Alcúdia</strong>, donde participé en tareas de desarrollo y mantenimiento de páginas web, implementando soluciones tanto en el front-end como en el back-end.</p>
+      <p class="intro-text">También he formado parte del equipo técnico de <strong>Asociación Espurna</strong>, colaborando en el desarrollo de nuevas funcionalidades para su plataforma y ayudando a mejorar la estructura y accesibilidad del sitio web.</p>
+    </section>
+
+    <section id="knowledge" class="section" data-aos="fade-up">
+      <h2 class="section-title">📘 Conocimientos</h2>
+      <ul class="intro-text">
+        <li><strong>Lenguajes:</strong> Java, JavaScript, HTML5, CSS3, PHP, Python, C#</li>
+        <li><strong>Frameworks y herramientas:</strong> Symfony, Unity, WordPress</li>
+        <li><strong>Bases de datos:</strong> MySQL, PHPMyAdmin</li>
+        <li><strong>Servidores:</strong> Ubuntu Server, Windows Server, Apache, Tomcat</li>
+        <li><strong>Otros:</strong> Desarrollo de landing pages, diseño responsivo, buenas prácticas de accesibilidad web</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section" data-aos="fade-up">
+      <h2 class="section-title">📨 Contacto</h2>
+      <form action="https://formsubmit.co/gorenjm04@gmail.com" method="POST" class="contact-form" data-aos="flip-up" id="contact-form">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit">📨 Enviar</button>
+      </form>
+      <div class="popup" id="popup">¡Mensaje enviado con éxito!</div>
+    </section>
+  </main>
+
+  <footer class="footer" data-aos="fade-up" data-aos-offset="200" data-aos-once="true">
+    <div class="container">
+      <p>&copy; 2025 Goren Jiménez Mira</p>
+      <div class="socials">
+        <a href="https://github.com/G0R3N" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/goren-jimenez-mira" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts al final para evitar errores -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init();
+
+      const form = document.getElementById('contact-form');
+      const popup = document.getElementById('popup');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            form.reset();
+            popup.style.display = 'block';
+            setTimeout(() => {
+              popup.style.display = 'none';
+            }, 4000);
+          } else {
+            alert('Hubo un error al enviar el mensaje.');
+          }
+        })
+        .catch(() => alert('Error al enviar el formulario.'));
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
 </html>
